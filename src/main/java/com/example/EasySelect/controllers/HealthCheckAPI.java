@@ -13,4 +13,8 @@ public class HealthCheckAPI {
     public ResponseEntity DefaultAPI() {
         return new ResponseEntity<>("Hi, application is live on port 8080", HttpStatus.OK);
     }
+    @GetMapping("/health-check")
+    public ResponseEntity HealthAPI() {
+        return new ResponseEntity<>("Health check api", HttpStatus.OK);
+    }
 }
